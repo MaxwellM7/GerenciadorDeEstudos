@@ -1,70 +1,75 @@
-# Getting Started with Create React App
+# Gerenciador de Estudos 2024
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este projeto é um aplicativo React que ajuda a organizar seus estudos ao longo da semana, permitindo que você defina o que vai estudar em diferentes períodos (manhã, tarde e noite) para cada dia da semana.
 
-## Available Scripts
+## Funcionalidades
 
-In the project directory, you can run:
+- Seleção de dia da semana (Segunda a Domingo)
+- Escolha do período (manhã, tarde, noite)
+- Adição de atividades de estudo para cada período
+- Visualização dos estudos programados para cada dia da semana
+
+## Como executar o projeto
+
+Este projeto foi criado com [Create React App](https://github.com/facebook/create-react-app).
+
+### Scripts disponíveis
+
+No diretório do projeto, você pode rodar:
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Executa o aplicativo no modo de desenvolvimento.\
+Abra [http://localhost:3000](http://localhost:3000) para visualizá-lo no seu navegador.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+A página será recarregada automaticamente se você fizer alterações no código.\
+Você também verá erros de lint no console.
 
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Executa o test runner no modo interativo de observação.\
+Veja a seção sobre [execução de testes](https://facebook.github.io/create-react-app/docs/running-tests) para mais informações.
 
 ### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Constrói o aplicativo para produção na pasta `build`.\
+A construção é otimizada para melhor performance em produção.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Os arquivos são minificados e os nomes de arquivo incluem os hashes.\
+O app está pronto para ser publicado!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Veja a seção sobre [deployment](https://facebook.github.io/create-react-app/docs/deployment) para mais informações.
 
 ### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+**Nota: esta é uma operação irreversível.** Uma vez que você executar `eject`, você não poderá voltar atrás!
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Se você não estiver satisfeito com as configurações de build e ferramentas, você pode `eject` a qualquer momento. Este comando removerá a dependência de build única do seu projeto.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Ao fazer isso, todas as configurações e dependências transitivas (Webpack, Babel, ESLint, etc.) serão copiadas diretamente para o seu projeto, dando controle total sobre elas. 
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Exemplo de uso
 
-## Learn More
+Ao rodar o projeto, você verá uma interface onde pode escolher o dia da semana, o período (manhã, tarde ou noite) e o assunto que deseja estudar. Após adicionar a atividade, ela será exibida na lista correspondente ao dia e ao período.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Por exemplo, você pode adicionar "Matemática" para estudar na "Manhã" de "Segunda-feira" e, em seguida, visualizar essa atividade na página.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Estrutura do Código
 
-### Code Splitting
+O código principal está localizado no arquivo `App.js` e utiliza os seguintes conceitos:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- **useState**: Gerenciamento de estado para armazenar os estudos de cada dia da semana.
+- **Eventos de formulário**: Manipulação de inputs para adicionar atividades de estudo.
+- **Mapeamento de dias da semana**: Renderização dinâmica dos dias e períodos da semana.
 
-### Analyzing the Bundle Size
+### Personalização
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Você pode personalizar o aplicativo facilmente alterando o layout e adicionando mais funcionalidades, como a edição ou remoção de atividades, integração com banco de dados, ou até mesmo um sistema de lembretes para cada estudo programado.
 
-### Making a Progressive Web App
+## Contribuições
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Sinta-se à vontade para fazer um fork deste repositório e enviar Pull Requests. Todos os tipos de melhorias são bem-vindos!
 
-### Advanced Configuration
+## Licença
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Este projeto está licenciado sob a licença MIT.
