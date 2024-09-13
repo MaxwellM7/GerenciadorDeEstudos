@@ -18,6 +18,7 @@ function App() {
   const [diaSelecionado, setDiaSelecionado] = useState('Segunda-feira');
   const [periodoSelecionado, setPeriodoSelecionado] = useState('manha');
 
+  // Função para adicionar a atividade
   const adicionarAtividade = () => {
     if (!atividade) return;
 
@@ -29,8 +30,18 @@ function App() {
       },
     }));
 
-    // Limpar os campos após adicionar
-    setAtividade('');
+    setAtividade(''); // Limpa o campo após adicionar
+  };
+
+  // Função para remover a atividade
+  const removerAtividade = (dia, periodo) => {
+    setEstudos((prevEstudos) => ({
+      ...prevEstudos,
+      [dia]: {
+        ...prevEstudos[dia],
+        [periodo]: '', // Remove a atividade ao definir o valor como vazio
+      },
+    }));
   };
 
   return (
@@ -65,14 +76,26 @@ function App() {
       {diasDaSemana.map(dia => (
         <div key={dia} className="dia-container">
           <h2>{dia}</h2>
+
           <div className="periodo-container">
-            <strong>Manhã:</strong> {estudos[dia].manha}
+            <strong>Manhã:</strong> {estudos[dia].manha || 'Nenhum estudo'}
+            {estudos[dia].manha && (
+              <button className="btn-remover" onClick={() => removerAtividade(dia, 'manha')}>X</button>
+            )}
           </div>
+
           <div className="periodo-container">
-            <strong>Tarde:</strong> {estudos[dia].tarde}
+            <strong>Tarde:</strong> {estudos[dia].tarde || 'Nenhum estudo'}
+            {estudos[dia].tarde && (
+              <button className="btn-remover" onClick={() => removerAtividade(dia, 'tarde')}>X</button>
+            )}
           </div>
+
           <div className="periodo-container">
-            <strong>Noite:</strong> {estudos[dia].noite}
+            <strong>Noite:</strong> {estudos[dia].noite || 'Nenhum estudo'}
+            {estudos[dia].noite && (
+              <button className="btn-remover" onClick={() => removerAtividade(dia, 'noite')}>X</button>
+            )}
           </div>
         </div>
       ))}
